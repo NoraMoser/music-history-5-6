@@ -1,0 +1,173 @@
+body {
+	font-family: 'Lato', sans-serif;
+}
+
+/*Top Navigation*/
+
+.top-nav {
+	display: inline;
+}
+
+.border-right{
+	border-right: 1px solid black;
+	margin-right: 2%;
+	padding-right: 10px;
+}
+
+.artist-name {
+	border-right: 1px solid black;
+	margin-right: 2%;
+	padding-right: 10px;
+}
+
+.album-name {
+	border-right: 1px solid black;
+	margin-right: 2%;
+	padding-right: 10px;
+}
+
+a:active {
+	text-decoration: none;
+	color: black;
+}
+
+.top-bar {
+	background-color: #FFB4B0;
+	display: inline-block;
+	width: 80%;
+	padding: 15px;
+	margin-left: 10%;
+	border: 2px solid black;
+}
+/* search fields for add page */
+
+#searchFields {
+	float: top;
+}
+
+#songName {
+	height: 30px;
+	width: 150px;
+	font-size: 1em;
+}
+
+#artistName {
+	height: 30px;
+	width: 150px;	
+	font-size: 1em;
+}
+
+#albumName {
+	height: 30px;
+	width: 150px;	
+	font-size: 1em;
+}
+
+.button {
+	width: 50px;
+	background-color: white;
+}
+/*Side Element */
+
+.sidebar {
+	display: block;
+	float: left;
+	margin-top: 1%;
+	background-color: #4DD7FA;
+	border: 2px solid black;
+	margin-left: 10%;
+	padding: 40px 30px;
+	height: 450px;
+
+}
+
+.options {
+	width: 80%;
+	border: 1px solid black;
+}
+
+.checkbox {
+	column-count: 2;
+}
+
+button {
+	width: 80%;
+	background-color: lightgray;
+	border: 1px solid black;
+}
+
+/*Main Content */
+
+.main-content {
+	display: inline-block;
+	float: center;
+	width: 740px;
+	height: 431px;
+	margin-left: 10px;
+	border: 2px solid black;
+	margin-top: 1%;
+	background-color: #FEFAC0;
+	padding: 50px 30px;
+	font-size: 1.1em;
+}
+
+.song1list {
+	display: inline;
+}
+
+h2 {
+	color: #785616;
+}
+
+/*Button Links*/
+.visible {
+	display: block;
+  }
+  
+  .hidden {
+	display: none;
+  }
+
+  /*Add content page */
+
+  .main-content {
+	  overflow: scroll;
+  }
+
+  /* List content page */
+
+  /* .list-content {
+	margin-left: 10px;
+	background-color: #FEFAC0;
+	font-size: 1.1em;
+	
+  } */
+
+  #list-second-view {
+	display: inline-block;
+	float: center;
+	width: 740px;
+	height: 431px;
+	margin-left: 10px;
+	border: 2px solid black;
+	margin-top: 1%;
+	background-color: #FEFAC0;
+	padding: 50px 30px;
+	font-size: 1.1em;
+	overflow: scroll;
+  }
+
+  .deleteBtn {
+	  width: 7%;
+	  background-color: lightblue;
+	  border-radius: 12%;
+	  margin-left: 3px;
+  }
+
+  #more {
+	  float: bottom;
+	  width: 7%;
+	  background-color: lightblue;
+	  border-radius: 12%;
+
+  }

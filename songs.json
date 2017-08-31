@@ -1,0 +1,26 @@
+[
+    {
+    "name" : "Karma Police",
+    "artist" : "RadioHead",
+    "album" : "OK Computer",
+    "genre" : "Alternative"
+    },
+    {
+    "name": "Tiny Dancer",
+    "artist" : "Elton John",
+    "album" : "Madman Across the Water",
+    "genre" : "Folk"
+    },
+    {
+    "name" : "Scar",
+    "artist" : "Missy Higgins",
+    "album" : "The Sound White",
+    "genre" : "Alternative"
+    },
+    {
+    "name" : "New York New York",
+    "artist" : "Ryan Adams",
+    "album" : "Gold",
+    "genre" : "Alternative"
+    }
+]

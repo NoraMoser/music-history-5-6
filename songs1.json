@@ -1,0 +1,26 @@
+[
+    {
+    "name" : "John Wayne Gacy, Jr.",
+    "artist" : "Sufjan Stevens",
+    "album" : "Illinoise",
+    "genre" : "Indie"
+    },
+    {
+    "name": "Hoppípolla",
+    "artist" : "Sigur Rós",
+    "album" : "Takk",
+    "genre" : "Instrumental Rock"
+    },
+    {
+    "name" : "Silver Lining",
+    "artist" : "Rilo Kiley",
+    "album" : "Under the Blacklight",
+    "genre" : "Indie Rock"
+    },
+    {
+    "name" : "Purple Rain",
+    "artist" : "Prince",
+    "album" : "Purple Rain",
+    "genre" : "Rock"
+    }
+]
