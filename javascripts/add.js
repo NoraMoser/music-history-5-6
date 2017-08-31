@@ -6,7 +6,7 @@ var listView = document.getElementById("list-view");
 var addLink = document.getElementById("link-add");
 var addView = document.getElementById("add-view");
 
-addLink.addEventListener("click", function() {
+$("#link-add").click(function() {
   homeView.classList.add("hidden");
   listView.classList.add("hidden");
   
