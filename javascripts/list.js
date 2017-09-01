@@ -1,15 +1,8 @@
-var homeLink = document.getElementById("view-music");
-var homeView = document.getElementById("home-view");
-var listLink = document.getElementById("link-list");
-console.log(listLink);
-var listView = document.getElementById("list-view");
-var addLink = document.getElementById("link-add");
-var addView = document.getElementById("add-view");
+
 
 var listSongs = {};
 
 $("#link-list").click(function(event) {
-  // event.preventDefault();
   $("#home-view").addClass("hidden");
   $("add-view").addClass("hidden");
   $("#list-view").addClass("visible");
@@ -19,6 +12,8 @@ console.log("booyah");
 let songRequest = new XMLHttpRequest();
 songRequest.addEventListener("load", songRequestComplete);
 songRequest.addEventListener("error", songRequestFailed);
+
+
 function songRequestComplete(event){
     console.log("songs have loaded");
     listSongs = JSON.parse(event.target.responseText);
@@ -27,16 +22,17 @@ function songRequestComplete(event){
 }
 function showData(songs, item){
 
+    let display = "";
+
     var indSongs = Object.keys(listSongs);
     console.log("indSongs", indSongs);
-    let songDiv = document.getElementById("listViewMH");
     
     indSongs.forEach(function(id, index) {
       console.log("listSongs", listSongs);
       console.log("index", index)
       console.log("id", id);
     // let songItem = listSongs.songs[index];
-    songDiv.innerHTML += `<div class='list-content' id='songCard'>
+    display += `<div class='list-content' id='songCard'>
     <div class="Song1 specific-song">
     <h2>${listSongs[id].name}</h2>
     <h4 class="song1list artist-name">${listSongs[id].artist}</h4>
@@ -44,30 +40,20 @@ function showData(songs, item){
     <h4 class="song1list genre-type">${listSongs[id].genre}</h4>
     <button class='deleteBtn'>Delete</button>
     </div></div>`
-    //   for (var i = 0; i < deleteButton.length; i++) {
-      // };
-      // console.log("listSongs.name", listSongs.songs.name);
+
+    $("#listViewMH").html(display);
+
       
     });
-    // songDiv.innerHTML += listSongs;
-    
-    let wholeSongDiv = document.getElementById("songCard");
+  
 
     $(".deleteBtn").on("click", function(){
       $(this).parent().parent().remove()
   });
     
-    // console.log("delete button", deleteButton.childNodes);
-    // deleteButton.addEventListener("click", function() {
-      //    wholeSongDiv.classList.add("hidden");
-      // }) 
+ 
     }
-    
-// var deleteButton = document.getElementById("button");
-// for (let i = 0; i < deleteButton.length; i++) {
-//   let newDeleteButton = deleteButton[i];
-//   console.log(newDeleteButton);
-// }
+
 function songRequestFailed(event) {
     console.log("dataFailed", event);
 }
