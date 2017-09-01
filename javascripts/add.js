@@ -1,21 +1,13 @@
 
-var homeLink = document.getElementById("view-music");
-var homeView = document.getElementById("home-view");
-var listLink = document.getElementById("link-list");
-var listView = document.getElementById("list-view");
-var addLink = document.getElementById("link-add");
-var addView = document.getElementById("add-view");
-
 $("#link-add").click(function() {
-  homeView.classList.add("hidden");
-  listView.classList.add("hidden");
+  $("#home-view").addClass("hidden");
+  $("#list-view").addClass("hidden");
   
-  addView.classList.add("visible");
-  addView.classList.remove("hidden");
+  $("#add-view").addClass("visible");
+  $("#add-view").removeClass("hidden");
   
-  var inputButton = document.getElementById("add-button");
   console.log(songs2);
-  inputButton.addEventListener("click", function(){
+  $("#add-button").click(function() {
     console.log("omggg");
     // songs2 = []; 
     displayNewSongs();
@@ -37,16 +29,19 @@ function displayNewSongs() {
 }
 
 function displayOriginalSongs() {
-  contentArea2.innerHTML = "";
+  var display = ""
+  $("#song-container2").html("");
   for (let j = 0; j < songs2.length; j++) {
   
     console.log(songs2[j]);
-    contentArea2.innerHTML += `<div class="Song1 specific-song">
-                            <h2>${songs2[j].name}</h2>
-                            <h4 class="song1list artist-name">${songs2[j].artist}</h4>
-                            <h4 class="song1list album-name">${songs2[j].album}</h4>
-                            <h4 class="song1list genre-type">${songs2[j].genre}</h4>
-                            </div>`;
+    
+        display += `<div class="Song1 specific-song">
+                    <h2>${songs2[j].name}</h2>
+                    <h4 class="song1list artist-name">${songs2[j].artist}</h4>
+                    <h4 class="song1list album-name">${songs2[j].album}</h4>
+                    <h4 class="song1list genre-type">${songs2[j].genre}</h4>
+                    </div>`;
+    $("#song-container2").html(display);
                             console.log(songs2[j]);
   }
   // var inputButton = document.getElementById("add-button");
