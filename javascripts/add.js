@@ -44,11 +44,9 @@ function displayOriginalSongs() {
     $("#song-container2").html(display);
                             console.log(songs2[j]);
   }
-  // var inputButton = document.getElementById("add-button");
+  
   
     console.log(songs2);
   }
-    // inputButton.addEventListener("click", function(){
-    //   console.log("omggg");
-    //   displayNewSongs();
+
   

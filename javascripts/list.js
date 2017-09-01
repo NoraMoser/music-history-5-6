@@ -8,12 +8,12 @@ var addView = document.getElementById("add-view");
 
 var listSongs = {};
 
-listLink.addEventListener("click", function(event) {
+$("#link-list").click(function(event) {
   // event.preventDefault();
-  homeView.classList.add("hidden");
-  addView.classList.add("hidden");
-  listView.classList.add("visible");
-  listView.classList.remove("hidden");
+  $("#home-view").addClass("hidden");
+  $("add-view").addClass("hidden");
+  $("#list-view").addClass("visible");
+  $("#list-view").removeClass("hidden");
 });
 console.log("booyah");
 let songRequest = new XMLHttpRequest();
