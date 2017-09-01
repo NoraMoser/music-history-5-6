@@ -1,52 +1,26 @@
-let listSongs2 = {};
+// let listSongs2 = {};
 
-$("#more").on("click", function(){
-    let songRequest2 = new XMLHttpRequest();
-    songRequest2.addEventListener("load", songRequestComplete);
-    songRequest2.addEventListener("error", songRequestFailed);
+$("#more").click(function(){
+    console.log("help");
 
-    function songRequestComplete(event){
-        console.log("songs have loaded");
-        listSongs2 = JSON.parse(event.target.responseText);
-        console.log("song data", listSongs2);
-        showData2(listSongs2);
-    }
-    function showData2(songs, item){
-        let display = "";
+$.ajax({
+	url: "javascripts/songs1.json" //url to go to
+}).done(functionIWantjQueryToExecute) //call function
 
-        var indSongs2 = Object.keys(listSongs2);
-        console.log("indSongs", indSongs2);
-        
-        
-        indSongs2.forEach(function(id, index) {
-          console.log("listSongs", listSongs2);
-          console.log("index", index)
-          console.log("id", id);
-    
-        display += `<div class='list-content' id='songCard'>
-        <div class="Song1 specific-song">
-        <h2>${listSongs2[id].name}</h2>
-        <h4 class="song1list artist-name">${listSongs2[id].artist}</h4>
-        <h4 class="song1list album-name">${listSongs2[id].album}</h4>
-        <h4 class="song1list genre-type">${listSongs2[id].genre}</h4>
-        <button class='deleteBtn'>Delete</button>
-        </div></div>`
+function functionIWantjQueryToExecute(songList) { // get array of songs
+	console.log(songList.songs1);
 
-        $("#secondGroup").html(display);
+	for(var i = 0; i < songList.songs1.length; i++) { //loop through array
+		var currentSong = songList.songs1[i]; 
+		$("#secondGroup").append(`<div class='list-content' id='songCard'>`); //spit out stuff
+		$("#secondGroup").append(`<div class="Song1 specific-song">`);
+        $("#secondGroup").append(`<h2>${currentSong.name}</h2>`);
+        $("#secondGroup").append(`<h4 class="song1list artist-name">${currentSong.artist}</h4>`);
+        $("#secondGroup").append(`<h4 class="song1list album-name">${currentSong.album}</h4>`);
+        $("#secondGroup").append(`<h4 class="song1list genre-type">${currentSong.genre}</h4>`);
+        $("#secondGroup").append(`<button class='deleteBtn'>Delete</button>`);
+        $("#secondGroup").append(`</div></div>`);
         
-          
-        });
-        
-    
-        $(".deleteBtn").on("click", function(){
-          $(this).parent().parent().remove()
-      });
-        
-        }
-        
-    function songRequestFailed(event) {
-        console.log("dataFailed", event);
-    }
-    songRequest2.open("GET", "songs1.json");
-    songRequest2.send();
+	}
+};
 });

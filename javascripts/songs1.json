@@ -1,4 +1,5 @@
-[
+{
+    "songs1": [
     {
     "name" : "John Wayne Gacy, Jr.",
     "artist" : "Sufjan Stevens",
@@ -24,3 +25,4 @@
     "genre" : "Rock"
     }
 ]
+}
